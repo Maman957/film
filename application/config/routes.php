@@ -49,14 +49,35 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'FilmController';
+$route['default_controller'] = 'LoginController';
 $route['404_override'] = '';
-$route['translate_uri_dashes'] = FALSE;
+$route['translate_uri_dashes'] = false;
 
-$route['register'] = 'FilmController/register';
-$route['simpan_akun'] = 'FilmController/simpanAkun';
-$route['procces_login'] = 'FilmController/proccesLogin';
-$route['dasbord'] = 'FilmController/dasbord';
+$route['proses_login'] = 'LoginController/prosesLogin';
+$route['daftar'] = 'LoginController/daftar';
+$route['dasbor'] = 'ProdukController/dasbor';
+$route['produk'] = 'ProdukController/produk';
+$route['profil'] = 'ProdukController/profil';
+$route['hapus_produk/(:num)'] = 'ProdukController/hapusProduk/$1';
+$route['hapus_akun/(:num)'] = 'ProdukController/hapusAkun/$1';
+$route['tambah_produk'] = 'ProdukController/tambahProduk';
+$route['proses_daftar'] = 'LoginController/prosesDaftar';
+$route['simpan_produk'] = 'ProdukController/simpanProduk';
+$route['simpan_foto'] = 'ProdukController/simpanFoto';
+$route['ubah_produk/(:num)'] = 'ProdukController/ubahProduk/$1';
+$route['update_produk'] = 'ProdukController/updateProduk';
+$route['update_pengguna'] = 'ProdukController/updatePengguna';
+$route['get_produk'] = 'KatalogController/getProduk';
+$route['keranjang'] = 'ProdukController/keranjang';
+$route['simpan_keranjang'] = 'ProdukController/simpanKeranjang';
+$route['akun'] = 'ProdukController/akun';
+
+$route['katalog'] = 'KatalogController/katalog';
+$route['makanan/(:num)'] = 'KatalogController/getKategori/$1';
+$route['minuman/(:num)'] = 'KatalogController/getKategori/$1';
+
+
+
 $route['simpan_favorite'] = 'FilmController/simpanFavorite';
 $route['favorite'] = 'FilmController/favorite';
 $route['drama'] = 'FilmController/drama';
@@ -70,8 +91,8 @@ $route['action'] = 'FilmController/action';
 $route['pertama'] = 'FilmController/pertama';
 $route['kedua'] = 'FilmController/kedua';
 $route['ketiga'] = 'FilmController/ketiga';
-$route['pengaturan'] = 'FilmController/pengaturan';
-$route['tambah_film'] = 'FilmController/halaman_tambah';
+$route['owner/(:num)'] = 'ParfumController/owner/$1';
+
 $route['detail/(:num)'] = 'FilmController/detail/$1';
 $route['simpan_film'] = 'FilmController/simpanFilm';
 $route['simpan_komentar'] = 'FilmController/simpanKomentar';

@@ -1,32 +1,52 @@
-<header id="header" class="header d-flex align-items-center fixed-top">
-  <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+<div class="" id="home">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="navbar navbar-expand-xl navbar-light bg-biru">
+          <a class="navbar-brand" href="#">
+            <img src="<?= base_url('assets/img/logo.png') ?>" height="50px">
+          </a>
+          <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-    <div class="logo d-flex align-items-center">
-      <img src="<?= base_url('assets/img/foto.png') ?>" alt="">
-      <h1>Manky Film</h1>
+          <div class="collapse navbar-collapse bg-biru" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('dasbor') ?>">Dasbor
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Laporan
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Laporan harian</a>
+                  <a class="dropdown-item" href="#">Laporan mingguan</a>
+                  <a class="dropdown-item" href="#">Laporan bulanan</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('produk') ?>">Produk</a>
+              </li>
 
-    </div>
-
-    <div class="logo d-flex align-items-center position-relative">
-      <a href="#" class="mx-3 js-search-open"></span></a>
-      <i class="bi bi-list mobile-nav-toggle"></i>
-      <div class="search-form-wrap js-search-form-wrap">
-        <form action="search-result.html" class="search-form">
-          <span class="icon bi-search"></span>
-          <input type="text" placeholder="Search" class="form-control">
-          <button class="btn js-search-close"><span class="bi-x"></span></button>
-        </form>
+              <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('akun') ?>">Akun</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('profil') ?>">Profil</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link d-flex" href="<?= base_url() ?>">
+                  <i class="far fa-user mr-2 tm-logout-icon"></i>
+                  <span>Logout</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
-      <form action="<?= base_url('pengaturan') ?>" method="post">
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search.." name="keyword" autocomplete="off">
-          <input class="btn btn-outline-secondary" type="submit" name="submit">
-        </div>
-      </form>
-      <a href="<?= base_url() ?>" class="mx-2"><img src="<?= base_url('assets/img/keluar.png') ?>" width="30"></a>
-
     </div>
-
-  </div>
-
-</header>

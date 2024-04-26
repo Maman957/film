@@ -3,7 +3,7 @@
 
 <?php $this->load->view('layout/head.php') ?>
 
-<body>
+<body class="bg03" id="reportsPage">
     <!-- ======= Header ======= -->
     <?php $this->load->view('layout/header.php') ?>
     <!-- End Header -->

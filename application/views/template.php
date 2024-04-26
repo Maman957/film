@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php $this->load->view('layout/head.php') ?>
+<?php $this->load->view('layout/head2.php') ?>
 
-<body>
+<body class="bg03" id="reportsPage">
+    <!-- ======= Header ======= -->
+    <?php $this->load->view('layout/header2.php') ?>
+    <!-- End Header -->
 
     <?php $this->load->view($halaman) ?>
     <!-- ======= Footer ======= -->

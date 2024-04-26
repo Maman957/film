@@ -185,6 +185,7 @@
 .color-black { color: var(--color-black) !important; }
 
 /* Background Colors */
+.bg-biru { background-color: color(#26156f) !important; }
 .bg-default { background-color: var(--color-default) !important; }
 .bg-primary { background-color: var(--color-primary) !important; }
 .bg-primary-light { background-color: var(--color-primary-light) !important; }

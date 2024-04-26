@@ -2,111 +2,136 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kantin LP3I Yogyakarta</title>
+    <link href="<?= base_url('assets/img/icon.png') ?>" rel="icon">
+    <link rel="stylesheet" href="<?= base_url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/fontawesome.min.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/tooplate.css') ?>">
+    <style>
+        .bg-biru {
+            background: #26156f;
+        }
 
-    <title>Register/Manky Film</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+        .bg-merah {
+            background: hsl(2.84deg 77.87% 47.84%);
+        }
 
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+        .bg-white {
+            background: white;
+        }
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+        .tm-block {
+            padding: 55px 40px;
+        }
 
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
-    <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
-    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+        .text-red {
+            color: hsl(2.84deg 77.87% 47.84%);
+        }
 
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
+        .bg03 {
+            background-image: url(<?= base_url("assets/img/dash-bg-04.jpg") ?>);
+        }
 
-    <!-- =======================================================
-  * Template Name: NiceAdmin
-  * Updated: Nov 17 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+        .tm-login-col {
+            max-width: 500px;
+        }
+
+        .btn {
+            width: 100%;
+            box-sizing: border-box;
+            /* Menghitung padding dan border dalam total lebar */
+            display: block;
+            /* Mengubah tombol menjadi elemen blok agar mengambil lebar penuh */
+            margin-left: auto;
+            /* Meletakkan tombol di tengah horizontal */
+            margin-right: auto;
+            /* Meletakkan tombol di tengah horizontal */
+        }
+
+        .password-toggle {
+            position: absolute;
+            top: 50%;
+            left: 90%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .black-icon {
+            color: black;
+        }
+    </style>
 </head>
 
-<body>
-
-    <main>
-        <div class="container">
-
-            <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
-                            <div class="card mb-3">
-                                <div class="card-body">
-                                    <div class="pt-2 pb-2">
-                                        <h3 class="card-title text-center pb-0">Register</h3>
-                                    </div>
-
-                                    <form method="post" action="<?= base_url('simpan_akun') ?>" class="row g-3 needs-validation">
-                                        <div class="col-12">
-                                            <label for="nama" class="form-label">Nama</label>
-                                            <input type="text" name="nama" class="form-control" id="nama" required>
-                                            <div class="invalid-feedback">Silahkan masukan nama anda!</div>
-                                        </div>
-
-                                        <div class="col-12">
-                                            <label for="email" class="form-label">Email</label>
-                                            <input type="email" name="email" class="form-control" id="email" required>
-                                            <div class="invalid-feedback">Silakan masukkan alamat Email yang valid!</div>
-                                        </div>
-
-                                        <div class="col-12">
-                                            <label for="passsword" class="form-label">Password</label>
-                                            <input type="password" name="password" class="form-control" id="password" required>
-                                            <div class="invalid-feedback">Silakan masukkan kata sandi Anda!</div>
-                                        </div>
-
-                                        <input type="hidden" name="tipe" value="2">
-                                        <div class="col-12">
-                                            <button class="btn btn-primary w-100" type="submit">Daftar</button>
-                                        </div>
-                                        <div class="col-12">
-                                            <p class="small mb-0">Sudah memiliki akun? <a href="<?= base_url() ?>">Masuk</a></p>
-                                        </div>
-                                    </form>
-
+<body class="bg03">
+    <div class="container">
+        <div class="row tm-mt-big">
+            <div class="col-12 mx-auto tm-login-col">
+                <div class="bg-biru tm-block">
+                    <div class="row">
+                        <div class="col-12 text-center ">
+                            <img src="<?= base_url('assets/img/logo.png') ?>" height="40px">
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col-12 text-white">
+                            <?= $this->session->flashdata('message'); ?>
+                            <form class="tm-login-form" method="post" action="<?= base_url('proses_daftar') ?>">
+                                <label for="nama_pengguna" class="col-form-label">Nama</label>
+                                <input name="nama_pengguna" type="text" class="form-control validate" id="nama_pengguna" required>
+                                <label for="username" class="col-form-label">Username</label>
+                                <input name="username" type="text" class="form-control validate" id="username" required>
+                                <label for="password" class="col-form-label">Password</label>
+                                <div class="input-group">
+                                    <input name="password" type="password" class="form-control validate" id="password" value="" required>
+                                    <i class="password-toggle fas fa-eye-slash black-icon" onclick="togglePasswordVisibility()"></i>
                                 </div>
+                                <input type="hidden" name="role" value="2">
+                                <br>
+                                <div class="input-group mt-2">
+                                    <button type="submit" class="btn btn-primary text-white mx-auto">Daftar</button>
+                                </div>
+                            </form>
+                            <br>
+                            <div class="text-center">
+                                <p>
+                                    Sudah punya akun?
+                                    <a rel="nofollow" href="<?= base_url() ?>" class="text-white tm-footer-link">Masuk</a>
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-
-            </section>
-
+            </div>
         </div>
-    </main><!-- End #main -->
-
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/chart.js/chart.umd.js"></script>
-    <script src="assets/vendor/echarts/echarts.min.js"></script>
-    <script src="assets/vendor/quill/quill.min.js"></script>
-    <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
-    <script src="assets/vendor/tinymce/tinymce.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
-
+        <footer class="row tm-mt-big ">
+            <div class="col-12 font-weight-light text-center ">
+                <p class="d-inline-block tm-bg-transparant text-white py-2 px-4 bg-merah">
+                    Copyright &copy; 2024 . Created by
+                    <a rel="nofollow" href="https://www.instagram.com/achmad_957/" class="text-white tm-footer-link">Maman957</a>
+                </p>
+            </div>
+        </footer>
+    </div>
 </body>
+<script>
+    function togglePasswordVisibility() {
+        var passwordInput = document.getElementById('password');
+        var passwordToggle = document.querySelector('.password-toggle');
+
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            passwordToggle.classList.remove('fa-eye-slash');
+            passwordToggle.classList.add('fa-eye');
+        } else {
+            passwordInput.type = 'password';
+            passwordToggle.classList.remove('fa-eye');
+            passwordToggle.classList.add('fa-eye-slash');
+        }
+    }
+</script>
 
 </html>
