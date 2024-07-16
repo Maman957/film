@@ -38,8 +38,8 @@
                                 <td class="tm-product-name"><?= $no++; ?></td>
                                 <td class="tm-product-name"><?= $item->nama_produk; ?></td>
                                 <td class="text-center"><img src="<?= base_url() ?>assets/img/produk/<?= $item->gambar ?>" height="100px"></td>
-                                <td class="text-center">Rp.<?= $item->harga_beli; ?>,00</td>
-                                <td class="text-center">Rp.<?= $item->harga_jual; ?>,00</td>
+                                <td class="text-center">Rp<?= $item->harga_beli; ?></td>
+                                <td class="text-center">Rp<?= $item->harga_jual; ?></td>
                                 <td class="text-center"><?= $item->stok; ?></td>
                                 <td class="text-center"><i class="fas fa-trash-alt tm-trash-icon" id="btn-hapus" onclick="konfirmHapus(<?= $item->id_produk ?>)" type="button"></i> </td>
                                 <td class="text-center"><a href="<?= base_url() ?>ubah_produk/<?= $item->id_produk ?>"><i class="fas fa-pencil-alt tm-trash-icon" type="button"></i></a></td>

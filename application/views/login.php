@@ -93,7 +93,7 @@
 								</div>
 								<br>
 								<div class="input-group mt-2">
-									<button type="submit" class="btn btn-primary text-white mx-auto">Masuk</button>
+									<button type="submit" class="btn btn-primary bg-biru text-white mx-auto">Masuk</button>
 								</div>
 							</form>
 							<br>

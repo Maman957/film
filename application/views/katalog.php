@@ -19,7 +19,7 @@
                                     <a href="#!">
                                         <div class="mask">
                                             <div class="d-flex justify-content-start align-items-end h-100">
-                                                <h5><span class="badge bg-dark ms-2">NEW</span></h5>
+                                                <h5><span class="badge bg-danger ms-2">NEW</span></h5>
                                             </div>
                                         </div>
                                         <div class="hover-overlay">
@@ -31,7 +31,9 @@
                                     <a href="" class="text-reset">
                                         <h5 class="card-title mb-2"><?= $item->nama_produk; ?></h5>
                                     </a>
-                                    <h3 class="mb-3 price">Rp.<?= $item->harga_jual; ?>,00</h3>
+                                    <div class="mb-3 price">
+                                        <h4>Rp<?= $item->harga_jual; ?></h4>
+                                    </div>
                                     <form method="post" action="<?= base_url('simpan_keranjang') ?>">
                                         <input type="hidden" name="id_produk" value="<?= $item->id_produk; ?>">
                                         <input type="hidden" name="id_pengguna" value="<?= $this->session->userdata('id_pengguna') ?>">

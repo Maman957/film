@@ -14,6 +14,18 @@
   <script src="<?= base_url('assets/js/jquery-3.3.1.min.js') ?>"></script>
 
   <style>
+    .btn-primary {
+      background-color: #26156f !important;
+      color: white !important;
+      border-color: white !important;
+    }
+
+    .btn-danger {
+      background-color: #d9241b !important;
+      color: white !important;
+      border-color: white !important;
+    }
+
     .tm-bg-white {
       background-color: #fff;
     }

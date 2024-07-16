@@ -24,13 +24,11 @@
                             <th scope="col">Nama</th>
                             <th scope="col" class="text-center">Gambar</th>
                             <th scope="col" class="text-center">Username</th>
-                            <th scope="col" class="text-center">Password</th>
                             <th scope="col" class="text-center">Alamat</th>
                             <th scope="col" class="text-center">No Telepon</th>
                             <th scope="col" class="text-center">Role</th>
                             <th scope="col" class="text-center">Tanggal Update</th>
-                            <th scope="col" class="text-center">Hapus</th>
-                            <th scope="col" class="text-center">Ubah</th>
+                            <th scope="col" class="text-center">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -46,7 +44,6 @@
                                                                                                                                     ?> <img src="<?= base_url() ?>assets/img/produk/<?= $item->foto ?>" height="100px"> <?php
                                                                                                                                                                                                                     } ?></td>
                                 <td class="text-center"><?= $item->username; ?></td>
-                                <td class="text-center"><?= $item->password; ?></td>
                                 <td class="text-center"><?= $item->alamat; ?></td>
                                 <td class="text-center"><?= $item->nomor_telepon; ?></td>
                                 <td class="text-center"><?php if ($item->role == 1) {
@@ -55,8 +52,9 @@
                                                             echo 'Pelanggan';
                                                         } ?>
                                 <td class="text-center"><?= $item->tanggal_update; ?></td>
-                                <td class="text-center"><i class="fas fa-trash-alt tm-trash-icon" id="btn-hapus" onclick="konfirmHapus(<?= $item->id_pengguna ?>)" type="button"></i> </td>
-                                <td class="text-center"><a href="<?= base_url() ?>ubah_produk/<?= $item->id_pengguna ?>"><i class="fas fa-pencil-alt tm-trash-icon" type="button"></i></a></td>
+                                <td class="text-center"><i class="fas fa-trash-alt tm-trash-icon m-3" id="btn-hapus" onclick="konfirmHapus(<?= $item->id_pengguna ?>)" type="button"></i>
+                                    <a href="<?= base_url() ?>ubah_produk/<?= $item->id_pengguna ?>"><i class="fas fa-pencil-alt tm-trash-icon" type="button"></i></a>
+                                </td>
                             </tr>
                         <?php } ?>
                     </tbody>

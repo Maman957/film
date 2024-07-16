@@ -13,6 +13,18 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/tooplate.css') ?>">
     <script src="<?= base_url('assets/js/jquery-3.3.1.min.js') ?>"></script>
     <style>
+        .btn-primary {
+            background-color: #26156f !important;
+            color: white !important;
+            border-color: white !important;
+        }
+
+        .btn-danger {
+            background-color: #d9241b !important;
+            color: white !important;
+            border-color: white !important;
+        }
+
         h1 {
             text-align: center;
             color: #333;
@@ -50,16 +62,15 @@
         }
 
         .remove-button {
-            background-color: #f44336;
-            color: #fff;
-            border: none;
+            background-color: #d9241b !important;
+            color: white !important;
+            border-color: white !important;
             padding: 5px 10px;
             cursor: pointer;
-            border-radius: 4px;
         }
 
         .remove-button:hover {
-            background-color: #d32f2f;
+            background-color: #d9241b !important;
         }
 
         .add-item {
@@ -116,9 +127,9 @@
         }
 
         .checkout-button {
-            background-color: #2196f3;
-            color: #fff;
-            border: none;
+            background-color: #26156f !important;
+            color: white !important;
+            border-color: white !important;
             padding: 10px 20px;
             cursor: pointer;
             border-radius: 4px;
@@ -126,7 +137,7 @@
         }
 
         .checkout-button:hover {
-            background-color: #0d8bf2;
+            background-color: #26156f !important;
         }
 
         .card {
